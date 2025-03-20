@@ -1,98 +1,70 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جولدن إيجل للنقل والشحن</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-        }
-        .logo {
-            max-width: 200px;
-            height: auto;
-        }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        nav li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-        }
-        .container {
-            padding: 20px;
-            text-align: center;
-        }
-        .data-studio-embed {
-            width: 100%; /* Make it responsive */
-            max-width: 800px; /* Limit maximum width */
-            height: 600px;
-            margin: 20px auto;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            nav li {
-                display: block; /* Stack navigation items on smaller screens */
-                margin: 10px 0;
-            }
-            .data-studio-embed {
-                height: 400px; /* Adjust embed height on smaller screens */
-            }
-        }
-    </style>
+    <title>Transportation in North Sinai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
     <header>
-        <img class="logo" src="NewLogo.jpeg" alt="شعار جولدن إيجل">
-        <h1>جولدن إيجل للنقل والشحن</h1>
+        <h1>Transportation in North Sinai Governorate</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="roads.html"><i class="fas fa-road"></i> Roads</a></li>
+                <li><a href="airports.html"><i class="fas fa-plane"></i> Airports</a></li>
+                <li><a href="public_transport.html"><i class="fas fa-bus"></i> Public Transport</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav aria-label="Main Navigation">
-        <ul>
-            <li><a href="#" aria-label="الرئيسية">الرئيسية</a></li>
-            <li><a href="#" aria-label="خدماتنا">خدماتنا</a></li>
-            <li><a href="#" aria-label="حول الشركة">حول الشركة</a></li>
-            <li><a href="#" aria-label="اتصل بنا">اتصل بنا</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <div class="data-studio-embed">
-            <iframe width="100%" height="100%" src="https://lookerstudio.google.com/u/0/reporting/6e2d72f8-0210-40b7-8b67-c1a32f482268/page/WpQiE" frameborder="0" style="border:0" allowfullscreen aria-label="تقرير جوجل ستوديو"></iframe>
-        </div>
-    </div>
-
+    <main>
+        <section class="intro">
+            <h2>Welcome to North Sinai's Transportation Hub</h2>
+            <p>Explore the diverse transportation network that connects North Sinai. From modern roads to vital air and sea links, discover how the region is moving forward. North Sinai's strategic location makes it a crucial transit point for regional trade and travel. The governorate is committed to improving its transportation infrastructure to boost economic growth and enhance the quality of life for its residents.</p>
+            <img src="north_sinai_map.jpg" alt="North Sinai Map">
+        </section>
+        <section class="highlights">
+            <h2>Key Transportation Modes</h2>
+            <div class="mode">
+                <img src="road_icon.png" alt="Road Icon">
+                <h3>Roads</h3>
+                <p>Learn about the major road networks, ongoing infrastructure projects, and the impact of road development on the region.</p>
+                <a href="roads.html">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mode">
+                <img src="airport_icon.png" alt="Airport Icon">
+                <h3>Airports</h3>
+                <p>Discover the Al Arish International Airport, its facilities, flight information, and its role in connecting North Sinai to the world.</p>
+                <a href="airports.html">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mode">
+                <img src="bus_icon.png" alt="Bus Icon">
+                <h3>Public Transport</h3>
+                <p>Explore bus services, local transportation options, and plans for improving public transit in North Sinai.</p>
+                <a href="public_transport.html">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+        <section class="news">
+            <h2>Latest Transportation News</h2>
+            <article>
+                <h3>New Highway Project Announced</h3>
+                <p>The governorate has announced a new highway project aimed at reducing travel time between Al Arish and other major cities...</p>
+                <a href="#">Read More <i class="fas fa-newspaper"></i></a>
+            </article>
+            <article>
+                <h3>Al Arish Airport Expansion Update</h3>
+                <p>Updates on the ongoing expansion of Al Arish International Airport, including new terminal facilities and increased capacity...</p>
+                <a href="#">Read More <i class="fas fa-newspaper"></i></a>
+            </article>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2023 جولدن إيجل للنقل والشحن</p>
+        <p>&copy; 2024 Transportation in North Sinai</p>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
