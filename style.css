@@ -6,43 +6,50 @@ body {
 
 header {
     background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
+    padding: 10px 0;
 }
 
 nav ul {
     list-style: none;
+    text-align: center;
     padding: 0;
 }
 
-nav li {
+nav ul li {
     display: inline;
     margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
 }
 
 main {
     padding: 20px;
 }
 
-.intro img {
-    max-width: 100%;
-    height: auto;
-}
-
-.highlights {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.mode {
-    text-align: center;
-    margin: 20px;
-}
-
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #f0f0f0;
     text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+.company-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
+}
+
+.company-logo {
+    max-height: 80px;
+    margin-right: 20px;
+}
+
+.company-name {
+    margin: 0;
 }

@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div class="company-header">
+        <img src="NewLogo.jpeg" alt="Company Logo" class="company-logo">
+        <h1 class="company-name">Transportation in North Sinai Governorate</h1>
+    </div>
     <header>
-        <h1>Transportation in North Sinai Governorate</h1>
         <nav>
             <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -18,14 +21,20 @@
                 <li><a href="public_transport.html"><i class="fas fa-bus"></i> Public Transport</a></li>
                 <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
                 <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><button id="langToggle">Arabic</button></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="intro">
+        <section class="english-content">
             <h2>Welcome to North Sinai's Transportation Hub</h2>
-            <p>Explore the diverse transportation network that connects North Sinai. From modern roads to vital air and sea links, discover how the region is moving forward. North Sinai's strategic location makes it a crucial transit point for regional trade and travel. The governorate is committed to improving its transportation infrastructure to boost economic growth and enhance the quality of life for its residents.</p>
+            <p>Explore the diverse transportation network that connects North Sinai, Egypt. From modern roads to vital air and sea links, discover how the region is moving forward. North Sinai's strategic location makes it a crucial transit point for regional trade and travel. The governorate is committed to improving its transportation infrastructure to boost economic growth and enhance the quality of life for its residents.</p>
             <img src="north_sinai_map.jpg" alt="North Sinai Map">
+        </section>
+        <section class="arabic-content" style="display: none;" lang="ar" dir="rtl">
+            <h2>مرحبا بكم في مركز النقل في محافظة شمال سيناء</h2>
+            <p>استكشف شبكة النقل المتنوعة التي تربط شمال سيناء، مصر. من الطرق الحديثة إلى الروابط الجوية والبحرية الحيوية، اكتشف كيف تتقدم المنطقة. موقع شمال سيناء الاستراتيجي يجعلها نقطة عبور حاسمة للتجارة والسفر الإقليميين. تلتزم المحافظة بتحسين البنية التحتية للنقل لتعزيز النمو الاقتصادي وتحسين جودة الحياة لسكانها.</p>
+            <img src="north_sinai_map.jpg" alt="خريطة شمال سيناء">
         </section>
         <section class="highlights">
             <h2>Key Transportation Modes</h2>
@@ -65,6 +74,22 @@
     <footer>
         <p>&copy; 2024 Transportation in North Sinai</p>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        const langToggle = document.getElementById('langToggle');
+        const englishContent = document.querySelector('.english-content');
+        const arabicContent = document.querySelector('.arabic-content');
+
+        langToggle.addEventListener('click', () => {
+            if (langToggle.textContent === 'Arabic') {
+                langToggle.textContent = 'English';
+                englishContent.style.display = 'none';
+                arabicContent.style.display = 'block';
+            } else {
+                langToggle.textContent = 'Arabic';
+                englishContent.style.display = 'block';
+                arabicContent.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
