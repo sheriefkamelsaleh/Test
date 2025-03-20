@@ -6,21 +6,21 @@
     <title>جولدن إيجل للنقل والشحن</title>
     <style>
         body {
-            font-family: sans-serif; /* Use a suitable Arabic font */
+            font-family: sans-serif;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #f0f0f0; /* Example header color */
+            background-color: #f0f0f0;
             padding: 20px;
             text-align: center;
         }
-      .logo {
-            max-width: 200px; /* Adjust logo size as needed */
+        .logo {
+            max-width: 200px;
             height: auto;
         }
         nav {
-            background-color: #333; /* Example navigation color */
+            background-color: #333;
             color: white;
             padding: 10px;
         }
@@ -28,59 +28,67 @@
             list-style: none;
             margin: 0;
             padding: 0;
-            text-align: center; /* Center the navigation items */
-
+            text-align: center;
         }
         nav li {
             display: inline;
-            margin: 0 15px; /* Add some spacing between items */
+            margin: 0 15px;
         }
         nav a {
             color: white;
             text-decoration: none;
-            padding: 5px 10px; /* Add some padding around the links */
+            padding: 5px 10px;
         }
-
-      .container {
+        .container {
             padding: 20px;
-            text-align: center; /* Center the content within the container */
+            text-align: center;
         }
-      .data-studio-embed {
-            width: 800px; /* Adjust width as needed */
-            height: 600px; /* Adjust height as needed */
-            margin: 20px auto; /* Center the Data Studio embed */
+        .data-studio-embed {
+            width: 100%; /* Make it responsive */
+            max-width: 800px; /* Limit maximum width */
+            height: 600px;
+            margin: 20px auto;
         }
-
         footer {
             background-color: #333;
             color: white;
             padding: 10px;
             text-align: center;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav li {
+                display: block; /* Stack navigation items on smaller screens */
+                margin: 10px 0;
+            }
+            .data-studio-embed {
+                height: 400px; /* Adjust embed height on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <img class="logo" src="E:\work\Golden_Eagle\Golden_Eagle\NewLogo.jpeg" alt="شعار جولدن إيجل">
+        <img class="logo" src="NewLogo.jpeg" alt="شعار جولدن إيجل">
         <h1>جولدن إيجل للنقل والشحن</h1>
     </header>
 
-    <nav>
+    <nav aria-label="Main Navigation">
         <ul>
-            <li><a href="#">الرئيسية</a></li>
-            <li><a href="#">خدماتنا</a></li>
-            <li><a href="#">حول الشركة</a></li>
-            <li><a href="#">اتصل بنا</a></li>
+            <li><a href="#" aria-label="الرئيسية">الرئيسية</a></li>
+            <li><a href="#" aria-label="خدماتنا">خدماتنا</a></li>
+            <li><a href="#" aria-label="حول الشركة">حول الشركة</a></li>
+            <li><a href="#" aria-label="اتصل بنا">اتصل بنا</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <div class="data-studio-embed">
-            <iframe width="100%" height="100%" src="https://lookerstudio.google.com/u/0/reporting/6e2d72f8-0210-40b7-8b67-c1a32f482268/page/WpQiE" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe width="100%" height="100%" src="https://lookerstudio.google.com/u/0/reporting/6e2d72f8-0210-40b7-8b67-c1a32f482268/page/WpQiE" frameborder="0" style="border:0" allowfullscreen aria-label="تقرير جوجل ستوديو"></iframe>
         </div>
-      </div>
-
+    </div>
 
     <footer>
         <p>&copy; 2023 جولدن إيجل للنقل والشحن</p>
