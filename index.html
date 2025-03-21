@@ -72,12 +72,12 @@
     <header>
         <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="roads.html"><i class="fas fa-road"></i> Roads</a></li>
-                <li><a href="airports.html"><i class="fas fa-plane"></i> Airports</a></li>
-                <li><a href="public_transport.html"><i class="fas fa-bus"></i> Public Transport</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="index.html" class="english">Home</a><a href="index.html" class="arabic">الرئيسية</a></li>
+                <li><a href="roads.html" class="english">Roads</a><a href="roads.html" class="arabic">الطرق</a></li>
+                <li><a href="airports.html" class="english">Airports</a><a href="airports.html" class="arabic">المطارات</a></li>
+                <li><a href="public_transport.html" class="english">Public Transport</a><a href="public_transport.html" class="arabic">النقل العام</a></li>
+                <li><a href="about.html" class="english">About</a><a href="about.html" class="arabic">حول</a></li>
+                <li><a href="contact.html" class="english">Contact</a><a href="contact.html" class="arabic">اتصل بنا</a></li>
                 <li><button id="langToggle" aria-label="Toggle language" aria-pressed="false">Arabic</button></li>
             </ul>
         </nav>
@@ -93,7 +93,7 @@
             <p>اكتشف شبكة النقل الشاملة التي تربط مصر بوجهات رئيسية في الشرق الأوسط، خاصة المملكة العربية السعودية. نقدم مجموعة واسعة من الخدمات تشمل الشحن البري، الشحن الجوي، الشحن البحري، وحلول النقل العام.</p>
             <img src="egypt_middle_east_map.jpg" alt="خريطة مصر والشرق الأوسط">
         </section>
-        <section class="highlights">
+        <section class="highlights english">
             <h2>Our Key Transportation Services</h2>
             <div class="transport-mode">
                 <img src="road_icon.png" alt="Road Icon">
@@ -114,32 +114,21 @@
                 <a href="public_transport.html">View Services <i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
-        <section class="news">
-            <h2>Latest News & Updates</h2>
-            <article>
-                <h3>New Shipping Route to Jeddah Launched</h3>
-                <p>We've launched a new sea shipping route to Jeddah, Saudi Arabia, enhancing trade connections...</p>
-                <a href="#">Read More <i class="fas fa-newspaper"></i></a>
-            </article>
-            <article>
-                <h3>Expansion of Air Cargo Facilities in Cairo</h3>
-                <p>Our air cargo facilities in Cairo have been expanded to handle increased demand and improve efficiency...</p>
-                <a href="#">Read More <i class="fas fa-newspaper"></i></a>
-            </article>
-        </section>
-        <div id="map"></div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Golden Eagle Transportation</p>
-    </footer>
-    <script>
-        const langToggle = document.getElementById('langToggle');
-        const main = document.querySelector('main');
-        const companyName = document.getElementById('companyName');
-        let isArabic = false;
-
-        langToggle.addEventListener('click', () => {
-            isArabic = !isArabic;
-            main.classList.toggle('arabic', isArabic);
-            langToggle.textContent = isArabic ? 'English' : 'Arabic';
-            companyName.textContent = isArabic ? 'شركة
+        <section class="highlights arabic" lang="ar" dir="rtl">
+            <h2>خدمات النقل الرئيسية لدينا</h2>
+            <div class="transport-mode">
+                <img src="road_icon.png" alt="رمز الطريق">
+                <h3>الشحن البري</h3>
+                <p>خدمات شحن بري فعالة وموثوقة عبر مصر والشرق الأوسط، مع التركيز على المملكة العربية السعودية.</p>
+                <a href="roads.html">اقرأ المزيد <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="transport-mode">
+                <img src="airport_icon.png" alt="رمز المطار">
+                <h3>الشحن الجوي</h3>
+                <p>حلول شحن جوي سريعة وآمنة تربط المطارات الرئيسية في المنطقة.</p>
+                <a href="airports.html">اكتشف الشحن الجوي <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="transport-mode">
+                <img src="bus_icon.png" alt="رمز الحافلة">
+                <h3>النقل العام والخدمات اللوجستية</h3>
+                <p>خدمات النقل العام والخدمات اللوجستية الشاملة، تحسين المسارات والجداول الزمنية لتحقيق الكفاءة.</p>
