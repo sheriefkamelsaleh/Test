@@ -80,7 +80,7 @@ footer {
     direction: rtl;
 }
 
-/* New Section: OpenStreetMap Integration */
+/* Map Section */
 .map-section {
     margin-top: 40px;
     padding: 20px;
@@ -94,6 +94,25 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 400px;
     width: 100%;
+}
+
+/* Data Studio Section */
+.data-studio-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-studio-embed {
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 /* Responsive Design Adjustments */
@@ -115,6 +134,10 @@ footer {
     #map {
         height: 300px; /* Adjust map height for smaller screens */
     }
+
+    .data-studio-embed {
+        height: 400px; /* Adjust Data Studio height for smaller screens */
+    }
 }
 
 @media (max-width: 480px) {
@@ -128,5 +151,9 @@ footer {
 
     #map {
         height: 250px; /* Further adjust map height for very small screens */
+    }
+
+    .data-studio-embed {
+        height: 300px; /* Further adjust Data Studio height for very small screens */
     }
 }
