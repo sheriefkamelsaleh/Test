@@ -3,45 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Transportation in North Sinai</title>
+    <title>Contact - Golden Eagle Transportation</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Transportation in North Sinai Governorate</h1>
-        <nav>
+        <div class="company-header">
+            <img src="NewLogo.jpeg" alt="Golden Eagle Company Logo" class="company-logo">
+            <h1 class="company-name" id="companyName">Golden Eagle Company For Transportation</h1>
+        </div>
+        <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="roads.html"><i class="fas fa-road"></i> Roads</a></li>
-                <li><a href="airports.html"><i class="fas fa-plane"></i> Airports</a></li>
-                <li><a href="public_transport.html"><i class="fas fa-bus"></i> Public Transport</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="index.html" class="english">Home</a><a href="index.html" class="arabic">الرئيسية</a></li>
+                <li><a href="roads.html" class="english">Roads</a><a href="roads.html" class="arabic">الطرق</a></li>
+                <li><a href="airports.html" class="english">Airports</a><a href="airports.html" class="arabic">المطارات</a></li>
+                <li><a href="public_transport.html" class="english">Public Transport</a><a href="public_transport.html" class="arabic">النقل العام</a></li>
+                <li><a href="about.html" class="english">About</a><a href="about.html" class="arabic">حول</a></li>
+                <li><a href="contact.html" class="english">Contact</a><a href="contact.html" class="arabic">اتصل بنا</a></li>
+                <li><button id="langToggle" aria-label="Toggle language" aria-pressed="false">Arabic</button></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="contact-details">
+        <section class="english">
             <h2>Contact Us</h2>
-            <p>If you have any questions, feedback, or suggestions, please feel free to contact us.</p>
-
+            <p>If you have any questions or need assistance, feel free to reach out to us. We're here to help!</p>
             <h3>Email</h3>
-            <p><a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i> your.email@example.com</a></p>
-
+            <p><a href="mailto:info@goldeneagletransport.com"><i class="fas fa-envelope"></i> info@goldeneagletransport.com</a></p>
             <h3>Phone</h3>
-            <p><i class="fas fa-phone"></i> +20 [Your Phone Number]</p>
-
+            <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
             <h3>Address</h3>
-            <p><i class="fas fa-map-marker-alt"></i> [Your Address or Organization Address]</p>
-
-            <h3>Contact Form (Optional - Requires Backend)</h3>
-            <p>If you want to add a contact form, it would require backend development using a programming language like PHP, Python, or Node.js. For a static site, you may consider using a third-party service like Formspree or Google Forms.</p>
-
+            <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Cairo, Egypt</p>
+        </section>
+        <section class="arabic" lang="ar" dir="rtl">
+            <h2>اتصل بنا</h2>
+            <p>إذا كان لديك أي أسئلة أو تحتاج إلى مساعدة، فلا تتردد في التواصل معنا. نحن هنا لمساعدتك!</p>
+            <h3>البريد الإلكتروني</h3>
+            <p><a href="mailto:info@goldeneagletransport.com"><i class="fas fa-envelope"></i> info@goldeneagletransport.com</a></p>
+            <h3>الهاتف</h3>
+            <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
+            <h3>العنوان</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 الشارع الرئيسي، القاهرة، مصر</p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Transportation in North Sinai</p>
+        <p class="english">&copy; 2024 Golden Eagle Transportation. All rights reserved.</p>
+        <p class="arabic" lang="ar" dir="rtl">&copy; 2024 جولدن إيجل للنقل. جميع الحقوق محفوظة.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

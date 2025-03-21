@@ -3,49 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Public Transport in North Sinai</title>
+    <title>Public Transport - Golden Eagle Transportation</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Transportation in North Sinai Governorate</h1>
-        <nav>
+        <div class="company-header">
+            <img src="NewLogo.jpeg" alt="Golden Eagle Company Logo" class="company-logo">
+            <h1 class="company-name" id="companyName">Golden Eagle Company For Transportation</h1>
+        </div>
+        <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="roads.html"><i class="fas fa-road"></i> Roads</a></li>
-                <li><a href="airports.html"><i class="fas fa-plane"></i> Airports</a></li>
-                <li><a href="public_transport.html"><i class="fas fa-bus"></i> Public Transport</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="index.html" class="english">Home</a><a href="index.html" class="arabic">الرئيسية</a></li>
+                <li><a href="roads.html" class="english">Roads</a><a href="roads.html" class="arabic">الطرق</a></li>
+                <li><a href="airports.html" class="english">Airports</a><a href="airports.html" class="arabic">المطارات</a></li>
+                <li><a href="public_transport.html" class="english">Public Transport</a><a href="public_transport.html" class="arabic">النقل العام</a></li>
+                <li><a href="about.html" class="english">About</a><a href="about.html" class="arabic">حول</a></li>
+                <li><a href="contact.html" class="english">Contact</a><a href="contact.html" class="arabic">اتصل بنا</a></li>
+                <li><button id="langToggle" aria-label="Toggle language" aria-pressed="false">Arabic</button></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="public-transport-details">
-            <h2>Public Transportation in North Sinai</h2>
-            <p>Public transportation in North Sinai primarily consists of bus services connecting major cities and towns. The governorate is working on improving these services to provide more reliable and efficient transit for residents and visitors.</p>
-
-            <h3>Bus Services</h3>
-            <p>The main bus routes include:</p>
+        <section class="english">
+            <h2>Public Transport Solutions Across Egypt and the Middle East</h2>
+            <p>We provide efficient and reliable public transport services, including buses, trains, and metro systems, to connect cities and regions across Egypt and the Middle East.</p>
+            <img src="public_transport.jpg" alt="Public Transport in Egypt and Middle East">
+            <h3>Key Features</h3>
             <ul>
-                <li>Al Arish to Rafah</li>
-                <li>Al Arish to Sheikh Zuweid</li>
-                <li>Al Arish to Bir al-Abd</li>
-                <li>And other local routes...</li>
+                <li>Modern and comfortable vehicles.</li>
+                <li>Affordable fares for all passengers.</li>
+                <li>Real-time tracking and scheduling.</li>
+                <li>Accessible services for people with disabilities.</li>
             </ul>
-
-            <p>Information on schedules and fares is available at local bus stations.</p>
-
-            <h3>Future Plans</h3>
-            <p>The governorate is planning to introduce new bus routes and improve existing infrastructure to enhance public transportation options.</p>
-
-            <img src="north_sinai_bus.jpg" alt="A bus in North Sinai">
-
+        </section>
+        <section class="arabic" lang="ar" dir="rtl">
+            <h2>حلول النقل العام عبر مصر والشرق الأوسط</h2>
+            <p>نقدم خدمات نقل عام فعالة وموثوقة، تشمل الحافلات والقطارات وأنظمة المترو، لربط المدن والمناطق في مصر والشرق الأوسط.</p>
+            <img src="public_transport.jpg" alt="النقل العام في مصر والشرق الأوسط">
+            <h3>الميزات الرئيسية</h3>
+            <ul>
+                <li>مركبات حديثة ومريحة.</li>
+                <li>أسعار معقولة لجميع الركاب.</li>
+                <li>تتبع وجدولة في الوقت الفعلي.</li>
+                <li>خدمات متاحة للأشخاص ذوي الإعاقة.</li>
+            </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Transportation in North Sinai</p>
+        <p class="english">&copy; 2024 Golden Eagle Transportation. All rights reserved.</p>
+        <p class="arabic" lang="ar" dir="rtl">&copy; 2024 جولدن إيجل للنقل. جميع الحقوق محفوظة.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

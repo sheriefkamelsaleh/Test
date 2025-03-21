@@ -3,32 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roads in North Sinai</title>
+    <title>Roads - Golden Eagle Transportation</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Roads in North Sinai Governorate</h1>
-        <nav>
+        <div class="company-header">
+            <img src="NewLogo.jpeg" alt="Golden Eagle Company Logo" class="company-logo">
+            <h1 class="company-name" id="companyName">Golden Eagle Company For Transportation</h1>
+        </div>
+        <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="roads.html">Roads</a></li>
-                <li><a href="airports.html">Airports</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="english">Home</a><a href="index.html" class="arabic">الرئيسية</a></li>
+                <li><a href="roads.html" class="english">Roads</a><a href="roads.html" class="arabic">الطرق</a></li>
+                <li><a href="airports.html" class="english">Airports</a><a href="airports.html" class="arabic">المطارات</a></li>
+                <li><a href="public_transport.html" class="english">Public Transport</a><a href="public_transport.html" class="arabic">النقل العام</a></li>
+                <li><a href="about.html" class="english">About</a><a href="about.html" class="arabic">حول</a></li>
+                <li><a href="contact.html" class="english">Contact</a><a href="contact.html" class="arabic">اتصل بنا</a></li>
+                <li><button id="langToggle" aria-label="Toggle language" aria-pressed="false">Arabic</button></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="road-details">
-            <h2>Major Road Networks</h2>
-            <p>North Sinai has a developing road network that connects its cities and towns. The main highways include...</p>
-            <img src="north_sinai_road.jpg" alt="A road in North Sinai">
-            <p>Ongoing road construction projects aim to improve connectivity and reduce travel times...</p>
+        <section class="english">
+            <h2>Road Freight Services Across Egypt and the Middle East</h2>
+            <p>Our road freight services connect Egypt with key destinations in the Middle East, including Saudi Arabia, Jordan, and the UAE. We ensure timely and secure delivery of goods through our extensive network of highways and logistics hubs.</p>
+            <img src="road_network.jpg" alt="Road Network in Egypt and Middle East">
+            <h3>Key Features</h3>
+            <ul>
+                <li>Efficient cross-border transportation solutions.</li>
+                <li>Real-time tracking of shipments.</li>
+                <li>Dedicated fleet for temperature-sensitive goods.</li>
+                <li>Customs clearance assistance.</li>
+            </ul>
+        </section>
+        <section class="arabic" lang="ar" dir="rtl">
+            <h2>خدمات الشحن البري عبر مصر والشرق الأوسط</h2>
+            <p>خدمات الشحن البري لدينا تربط مصر بوجهات رئيسية في الشرق الأوسط، بما في ذلك المملكة العربية السعودية والأردن والإمارات. نضمن تسليم البضائع في الوقت المحدد وبشكل آمن من خلال شبكتنا الواسعة من الطرق السريعة والمراكز اللوجستية.</p>
+            <img src="road_network.jpg" alt="شبكة الطرق في مصر والشرق الأوسط">
+            <h3>الميزات الرئيسية</h3>
+            <ul>
+                <li>حلول نقل عبر الحدود بكفاءة.</li>
+                <li>تتبع الشحنات في الوقت الفعلي.</li>
+                <li>أسطول مخصص للبضائع الحساسة لدرجة الحرارة.</li>
+                <li>مساعدة في إجراءات التخليص الجمركي.</li>
+            </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Transportation in North Sinai</p>
+        <p class="english">&copy; 2024 Golden Eagle Transportation. All rights reserved.</p>
+        <p class="arabic" lang="ar" dir="rtl">&copy; 2024 جولدن إيجل للنقل. جميع الحقوق محفوظة.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

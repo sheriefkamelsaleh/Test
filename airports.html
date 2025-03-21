@@ -3,64 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airports in North Sinai</title>
+    <title>Airports - Golden Eagle Transportation</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Transportation in North Sinai Governorate</h1>
-        <nav>
+        <div class="company-header">
+            <img src="NewLogo.jpeg" alt="Golden Eagle Company Logo" class="company-logo">
+            <h1 class="company-name" id="companyName">Golden Eagle Company For Transportation</h1>
+        </div>
+        <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="roads.html"><i class="fas fa-road"></i> Roads</a></li>
-                <li><a href="airports.html"><i class="fas fa-plane"></i> Airports</a></li>
-                <li><a href="public_transport.html"><i class="fas fa-bus"></i> Public Transport</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="index.html" class="english">Home</a><a href="index.html" class="arabic">الرئيسية</a></li>
+                <li><a href="roads.html" class="english">Roads</a><a href="roads.html" class="arabic">الطرق</a></li>
+                <li><a href="airports.html" class="english">Airports</a><a href="airports.html" class="arabic">المطارات</a></li>
+                <li><a href="public_transport.html" class="english">Public Transport</a><a href="public_transport.html" class="arabic">النقل العام</a></li>
+                <li><a href="about.html" class="english">About</a><a href="about.html" class="arabic">حول</a></li>
+                <li><a href="contact.html" class="english">Contact</a><a href="contact.html" class="arabic">اتصل بنا</a></li>
+                <li><button id="langToggle" aria-label="Toggle language" aria-pressed="false">Arabic</button></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="airport-details">
-            <h2>Airports in North Sinai Governorate</h2>
-
-            <p>Al Arish International Airport is the primary airport serving North Sinai. It plays a crucial role in connecting the region to domestic and international destinations, facilitating travel, tourism, and trade.</p>
-
-            <h3>Al Arish International Airport</h3>
-            <p>Key details about Al Arish International Airport:</p>
+        <section class="english">
+            <h2>Air Cargo Services Across Egypt and the Middle East</h2>
+            <p>Our air cargo services connect major airports in Egypt, Saudi Arabia, and other Middle Eastern countries. We provide fast, reliable, and secure transportation of goods, ensuring your shipments reach their destination on time.</p>
+            <img src="airport_network.jpg" alt="Airport Network in Egypt and Middle East">
+            <h3>Key Features</h3>
             <ul>
-                <li><strong>Location:</strong> Al Arish, North Sinai, Egypt</li>
-                <li><strong>IATA Code:</strong> AAC</li>
-                <li><strong>Facilities:</strong> Modern terminal facilities, passenger services, cargo handling, and aircraft maintenance.</li>
-                <li><strong>Destinations:</strong> Domestic flights to Cairo and other major Egyptian cities. Potential for international flights.</li>
-                <li><strong>Role:</strong> Supports regional economic development, tourism, and emergency services.</li>
+                <li>Direct flights to major hubs in the region.</li>
+                <li>Specialized handling for perishable and high-value goods.</li>
+                <li>24/7 customer support.</li>
+                <li>Customs clearance and documentation assistance.</li>
             </ul>
-
-            <h3>Airport Development and Expansion</h3>
-            <p>Ongoing and planned developments include:</p>
+        </section>
+        <section class="arabic" lang="ar" dir="rtl">
+            <h2>خدمات الشحن الجوي عبر مصر والشرق الأوسط</h2>
+            <p>خدمات الشحن الجوي لدينا تربط المطارات الرئيسية في مصر والمملكة العربية السعودية ودول الشرق الأوسط الأخرى. نقدم نقلًا سريعًا وموثوقًا وآمنًا للبضائع، مما يضمن وصول شحناتك إلى وجهتها في الوقت المحدد.</p>
+            <img src="airport_network.jpg" alt="شبكة المطارات في مصر والشرق الأوسط">
+            <h3>الميزات الرئيسية</h3>
             <ul>
-                <li>Expansion of terminal capacity to accommodate more passengers.</li>
-                <li>Upgrades to runway and taxiway infrastructure.</li>
-                <li>Enhancement of cargo handling capabilities.</li>
-                <li>Attracting more airlines and expanding flight routes.</li>
+                <li>رحلات مباشرة إلى المحاور الرئيسية في المنطقة.</li>
+                <li>معالجة متخصصة للبضائع القابلة للتلف وعالية القيمة.</li>
+                <li>دعم العملاء على مدار الساعة.</li>
+                <li>مساعدة في التخليص الجمركي وإعداد المستندات.</li>
             </ul>
-
-            <h3>Importance to the Region</h3>
-            <p>Al Arish International Airport is vital for:</p>
-            <ul>
-                <li>Boosting tourism by providing easy access to North Sinai's attractions.</li>
-                <li>Facilitating business travel and trade.</li>
-                <li>Supporting emergency and humanitarian operations.</li>
-                <li>Improving regional connectivity.</li>
-            </ul>
-
-            <img src="al_arish_airport.jpg" alt="Al Arish International Airport">
-
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Transportation in North Sinai</p>
+        <p class="english">&copy; 2024 Golden Eagle Transportation. All rights reserved.</p>
+        <p class="arabic" lang="ar" dir="rtl">&copy; 2024 جولدن إيجل للنقل. جميع الحقوق محفوظة.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
