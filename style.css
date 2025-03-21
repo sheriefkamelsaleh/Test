@@ -79,3 +79,54 @@ footer {
     text-align: right;
     direction: rtl;
 }
+
+/* New Section: Google Maps Integration */
+.map-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#map {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    width: 100%;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .highlights {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .transport-mode {
+        margin-bottom: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #map {
+        height: 300px; /* Adjust map height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .company-name {
+        font-size: 1.2rem;
+    }
+
+    .transport-mode img {
+        max-width: 80px;
+    }
+
+    #map {
+        height: 250px; /* Further adjust map height for very small screens */
+    }
+}
