@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Additional styles for Arabic content */
-        .arabic-content {
+        /* Your CSS here (with improvements) */
+        .arabic {
             display: none;
             text-align: right;
             direction: rtl;
@@ -25,15 +25,23 @@
             font-size: 1.5rem;
             margin: 10px 0;
         }
+        .arabic .english, .english.arabic{display:none;}
+        .arabic .arabic, .english .english {display:block;}
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
     <div class="company-header">
-        <img src="NewLogo.jpeg" alt="Company Logo" class="company-logo">
+        <img src="NewLogo.jpeg" alt="Golden Eagle Company Logo" class="company-logo">
         <h1 class="company-name" id="companyName">Golden Eagle Company For Transportation</h1>
     </div>
     <header>
-        <nav>
+        <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="roads.html"><i class="fas fa-road"></i> Roads</a></li>
@@ -41,36 +49,36 @@
                 <li><a href="public_transport.html"><i class="fas fa-bus"></i> Public Transport</a></li>
                 <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
                 <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><button id="langToggle">Arabic</button></li>
+                <li><button id="langToggle" aria-label="Toggle language" aria-pressed="false">Arabic</button></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="english-content">
+        <section class="english">
             <h2>Welcome to North Sinai's Transportation Hub</h2>
             <p>Explore the diverse transportation network that connects North Sinai, Egypt. From modern roads to vital air and sea links, discover how the region is moving forward. North Sinai's strategic location makes it a crucial transit point for regional trade and travel. The governorate is committed to improving its transportation infrastructure to boost economic growth and enhance the quality of life for its residents.</p>
             <img src="north_sinai_map.jpg" alt="North Sinai Map">
         </section>
-        <section class="arabic-content" lang="ar" dir="rtl">
+        <section class="arabic" lang="ar" dir="rtl">
             <h2>مرحبا بكم في مركز النقل في محافظة شمال سيناء</h2>
             <p>استكشف شبكة النقل المتنوعة التي تربط شمال سيناء، مصر. من الطرق الحديثة إلى الروابط الجوية والبحرية الحيوية، اكتشف كيف تتقدم المنطقة. موقع شمال سيناء الاستراتيجي يجعلها نقطة عبور حاسمة للتجارة والسفر الإقليميين. تلتزم المحافظة بتحسين البنية التحتية للنقل لتعزيز النمو الاقتصادي وتحسين جودة الحياة لسكانها.</p>
             <img src="north_sinai_map.jpg" alt="خريطة شمال سيناء">
         </section>
         <section class="highlights">
             <h2>Key Transportation Modes</h2>
-            <div class="mode">
+            <div class="transport-mode">
                 <img src="road_icon.png" alt="Road Icon">
                 <h3>Roads</h3>
                 <p>Learn about the major road networks, ongoing infrastructure projects, and the impact of road development on the region.</p>
                 <a href="roads.html">Read More <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="mode">
+            <div class="transport-mode">
                 <img src="airport_icon.png" alt="Airport Icon">
                 <h3>Airports</h3>
                 <p>Discover the Al Arish International Airport, its facilities, flight information, and its role in connecting North Sinai to the world.</p>
                 <a href="airports.html">Read More <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="mode">
+            <div class="transport-mode">
                 <img src="bus_icon.png" alt="Bus Icon">
                 <h3>Public Transport</h3>
                 <p>Explore bus services, local transportation options, and plans for improving public transit in North Sinai.</p>
@@ -90,29 +98,32 @@
                 <a href="#">Read More <i class="fas fa-newspaper"></i></a>
             </article>
         </section>
+        <div id="map"></div>
     </main>
     <footer>
         <p>&copy; 2024 Transportation in North Sinai</p>
     </footer>
     <script>
         const langToggle = document.getElementById('langToggle');
-        const englishContent = document.querySelector('.english-content');
-        const arabicContent = document.querySelector('.arabic-content');
+        const main = document.querySelector('main');
         const companyName = document.getElementById('companyName');
+        let isArabic = false;
 
         langToggle.addEventListener('click', () => {
-            if (langToggle.textContent === 'Arabic') {
-                langToggle.textContent = 'English';
-                englishContent.style.display = 'none';
-                arabicContent.style.display = 'block';
-                companyName.textContent = 'شركة النسر الذهبي للنقل والشحن';
-            } else {
-                langToggle.textContent = 'Arabic';
-                englishContent.style.display = 'block';
-                arabicContent.style.display = 'none';
-                companyName.textContent = 'Golden Eagle Company For Transportation';
-            }
+            isArabic = !isArabic;
+            main.classList.toggle('arabic', isArabic);
+            langToggle.textContent = isArabic ? 'English' : 'Arabic';
+            companyName.textContent = isArabic ? 'شركة النسر الذهبي للنقل والشحن' : 'Golden Eagle Company For Transportation';
+            langToggle.setAttribute('aria-pressed', isArabic.toString());
         });
+
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 31.1333, lng: 33.8000 }, // North Sinai Coordinates.
+                zoom: 8,
+            });
+        }
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 </body>
 </html>
