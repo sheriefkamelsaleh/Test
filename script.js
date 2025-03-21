@@ -6,10 +6,11 @@ let isArabic = false;
 
 // Function to initialize the map
 function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 26.8206, lng: 30.8025 }, // Center on Egypt
-        zoom: 6,
-    });
+    const map = L.map('map').setView([26.8206, 30.8025], 6); // Center on Egypt
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
 
     // Add markers for key locations (example)
     const locations = [
@@ -19,13 +20,14 @@ function initMap() {
     ];
 
     locations.forEach(location => {
-        new google.maps.Marker({
-            position: location,
-            map: map,
-            title: location.title,
-        });
+        L.marker([location.lat, location.lng])
+            .addTo(map)
+            .bindPopup(location.title);
     });
 }
+
+// Initialize the map when the page loads
+document.addEventListener('DOMContentLoaded', initMap);
 
 // Language toggle functionality
 langToggle.addEventListener('click', () => {
